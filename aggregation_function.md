@@ -14,6 +14,14 @@ FROM employee;
 -- Find the average of all employee's salaries
 SELECT AVG(salary)
 FROM employee;
+
+-- Round
+SELECT ROUND(AVG(salary))
+FROM employee;
+
+-- Round
+SELECT ROUND(AVG(salary),2)
+FROM employee;
 ```
 
 3. Find sum/total of a column items

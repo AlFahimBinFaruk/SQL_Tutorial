@@ -15,3 +15,5 @@ SELECT *
 FROM employee
 WHERE birthday LIKE '____-12%';
 ```
+
+* Note = LIKE is case sensitive(p and P are different) to avoid it use ILIKE keyword.
