@@ -70,26 +70,8 @@ CREATE TABLE branch (
 );
 ```
 
-5. Change table column data-type and make it foreign key
 
-```
--- two different table
-ALTER TABLE employee
-ADD FOREIGN KEY(branch_id)
-REFERENCES branch(branch_id)
-ON DELETE SET NULL;
-
--- same table
-ALTER TABLE employee
-ADD FOREIGN KEY(super_id)
-REFERENCES employee(emp_id)
-ON DELETE SET NULL;
-
--- add a new column to the table
-ALTER TABLE employee ADD sex VARCHAR(1);
-```
-
-6. Create table with 2 primary and foreign key
+5. Create table with 2 primary and foreign key
 
 ```
 CREATE TABLE works_with (
@@ -102,13 +84,13 @@ CREATE TABLE works_with (
 );
 ```
 
-7. Insert new data into table
+6. Insert new data into table
 
 ```
 INSERT INTO employee(full_name,salary,birthday,super_id,address,branch_id) VALUES("fahim",333,'2002-12-25',4,"BD",3);
 ```
 
-8. Update table - column info
+7. Update table - column info
 
 ```
 -- update specefic-row info
@@ -122,7 +104,7 @@ SET address = "IN";
 
 ```
 
-9. Find/Search Info
+8. Find/Search Info
 
 ```
 -- Normal
@@ -181,7 +163,7 @@ WHERE full_name IN ('Jim', 'Michael', 'Johnny', 'David');
 
 ```
 
-10. DISTINCT keyword(unique values)
+9. DISTINCT keyword(unique values)
 
 ```
 -- Find out all the different genders

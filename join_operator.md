@@ -3,7 +3,7 @@
 - join is use to query between two or more related column in tables.
 
 1. Normal/inner join.
-
+* branch and employee are two different table with a relation.
 ```
 SELECT *
 FROM employee
