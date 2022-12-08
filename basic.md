@@ -30,6 +30,13 @@ DROP TABLE employee;
 3. Create new table in DB
 
 ```
+CREATE TABLE table_name (
+    column name + data type + constraints if any
+)
+```
+
+
+```
 - basic
 CREATE TABLE employee (
     emp_id INT PRIMARY KEY,
@@ -151,6 +158,13 @@ FROM employee
 WHERE birth_day >= 1970-01-01
 AND sex = 'F';
 
+
+-- Find all employee's id's and names who were born after 1979 or male
+SELECT emp_id, first_name, last_name
+FROM employee
+WHERE birth_day >= 1979-01-01
+OR sex = 'M';
+
 -- Find all employees born between 1970 and 1975
 SELECT *
 FROM employee
@@ -169,4 +183,21 @@ WHERE full_name IN ('Jim', 'Michael', 'Johnny', 'David');
 -- Find out all the different genders
 SELECT DISCINCT sex
 FROM employee;
+```
+
+10. Delete records
+```
+-- deletes everything
+DELETE FROM person;
+
+-- deletes which match the condition
+DELETE FROM person 
+WHERE id = 3;
+```
+
+11. Between keyword - select within a range.
+```
+SELECT * FROM person 
+WHERE date_of_birth 
+BETWEEN '2021-08-12' AND '2022-05-26';
 ```
