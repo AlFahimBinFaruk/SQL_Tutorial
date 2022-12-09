@@ -51,7 +51,7 @@ CREATE TABLE employee (
 CREATE TABLE employee (
     emp_id INT PRIMARY KEY AUTO_INCREMENT,
     full_name VARCHAR(40) NOT NULL,
-    salary INT,
+    salary INT CHECK(salary > 0),
     birthday DATE,
     super_id INT UNIQUE,
     address VARCHAR(40) DEFAULT 'not-given',
@@ -81,6 +81,7 @@ CREATE TABLE branch (
 5. Create table with 2 primary and foreign key
 
 ```
+-- MYSQL
 CREATE TABLE works_with (
     emp_id INT,
     client_id INT,
@@ -89,12 +90,23 @@ CREATE TABLE works_with (
     FOREIGN KEY(emp_id) REFERENCES employee(emp_id) ON DELETE CASCADE,
     FOREIGN KEY(client_id) REFERENCES client(client_id) ON DELETE CASCADE
 );
+
+-- POSTGRE sql = postgresql add foreign key itself.
+CREATE TABLE works_with (
+    emp_id INT,
+    client_id INT,
+    sales INT,
+    PRIMARY KEY(emp_id,client_id),
+    emp_id REFERENCES employee(emp_id) ON DELETE CASCADE,
+    client_id REFERENCES client(client_id) ON DELETE CASCADE
+);
 ```
 
 6. Insert new data into table
 
 ```
-INSERT INTO employee(full_name,salary,birthday,super_id,address,branch_id) VALUES("fahim",333,'2002-12-25',4,"BD",3);
+INSERT INTO employee(full_name,salary,birthday,super_id,address,branch_id) 
+VALUES("fahim",333,'2002-12-25',4,"BD",3);
 ```
 
 7. Update table - column info
@@ -174,6 +186,11 @@ WHERE birth_day BETWEEN '1970-01-01' AND '1975-01-01';
 SELECT *
 FROM employee
 WHERE full_name IN ('Jim', 'Michael', 'Johnny', 'David');
+
+-- != in sql is <>
+SELECT * FROM person 
+WHERE gender <> 'Male' 
+and gender <> 'Female';
 
 ```
 
