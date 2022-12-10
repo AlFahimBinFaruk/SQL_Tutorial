@@ -187,6 +187,11 @@ SELECT *
 FROM employee
 WHERE full_name IN ('Jim', 'Michael', 'Johnny', 'David');
 
+-- NOT IN
+SELECT *
+FROM employee
+WHERE full_name NOT IN ('Jim', 'Michael', 'Johnny', 'David');
+
 -- != in sql is <>
 SELECT * FROM person 
 WHERE gender <> 'Male' 

@@ -73,3 +73,14 @@ FROM employee;
 SELECT ROUND(MAX(salary))
 FROM employee;
 ```
+
+9. STATISTIC keyword
+```
+SELECT email AS Email
+FROM (
+    SELECT email,COUNT(email) AS emailCount
+    FROM person
+    GROUP BY email
+) AS STATISTIC
+WHERE emailCount > 1;
+```
