@@ -13,13 +13,13 @@
 
 1. Create new DB
 
-```
+```sql
 CREATE DATABASE testdb;
 ```
 
 2. DROP/delete DB,table
 
-```
+```sql
 -- drop db
 DROP DATABASE testdb;
 
