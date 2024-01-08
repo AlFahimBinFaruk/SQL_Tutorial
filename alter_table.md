@@ -9,21 +9,21 @@
 
 - custom way to add constraint
 
-```
+```sql
 ALTER TABLE person
 ADD CONSTRAINT unique_email UNIQUE(email);
 ```
 
 - normal way to add constraint
 
-```
+```sql
 ALTER TABLE person
 ADD UNIQUE(email);
 ```
 
 - Change table column data-type and make it foreign key
 
-```
+```sql
 -- two different table
 ALTER TABLE employee
 ADD FOREIGN KEY(branch_id)
@@ -35,14 +35,15 @@ ALTER TABLE employee
 ADD FOREIGN KEY(super_id)
 REFERENCES employee(emp_id)
 ON DELETE SET NULL;
-
--- add a new column to the table
+```
+- Add a new column to the table
+```sql
 ALTER TABLE employee ADD sex VARCHAR(1);
 ```
 
 - Working with constraints
 
-```
+```sql
 -- Drop constraint
 ALTER TABLE car
 DROP CONSTRAINT "car_pkey";
@@ -53,7 +54,7 @@ ADD PRIMARY KEY(id);
 
 ```
 
-- check constraint
+- adding check constraint,here unique_gender is the _col-name but it can be anything dosen't matter.
 ```
 ALTER TABLE person 
 ADD CONSTRAINT unique_gender CHECK(gender = 'male' OR gender = 'female');
