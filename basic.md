@@ -26,6 +26,7 @@ DROP DATABASE testdb;
 
 -- drop table
 DROP TABLE employee;
+
 ```
 
 3. Create new table in DB
@@ -41,7 +42,7 @@ CREATE TABLE db_name.table_name (
 ```
 
 
-```
+```sql
 - basic
 CREATE TABLE employee (
     emp_id INT PRIMARY KEY,
@@ -66,7 +67,7 @@ CREATE TABLE employee (
 
 - See db structure(popSQL)
 
-```
+```sql
 DESCRIBE employee;
 ```
 
@@ -109,17 +110,17 @@ CREATE TABLE works_with (
 
 6. Insert new data into table
 
-```
+```sql
 INSERT INTO employee(full_name,salary,birthday,super_id,address,branch_id) 
 VALUES("fahim",333,'2002-12-25',4,"BD",3);
 ```
 
 7. Update table - column info
 
-```
+```sql
 -- update specefic-row info
 UPDATE employee
-SET salary = 5000
+SET name="xyx",salary = 5000
 WHERE emp_id = 1;
 
 -- update all row info of that column
