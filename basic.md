@@ -26,7 +26,6 @@ DROP DATABASE testdb;
 
 -- drop table
 DROP TABLE employee;
-
 ```
 
 3. Create new table in DB
@@ -86,13 +85,13 @@ CREATE TABLE branch (
 
 5. Create table with 2 primary and foreign key
 
-```
+```sql
 -- MYSQL
 CREATE TABLE works_with (
     emp_id INT,
     client_id INT,
     sales INT,
-    PRIMARY KEY(emp_id,client_id),
+    PRIMARY KEY(emp_id,client_id)--composite primary-key,
     FOREIGN KEY(emp_id) REFERENCES employee(emp_id) ON DELETE CASCADE,
     FOREIGN KEY(client_id) REFERENCES client(client_id) ON DELETE CASCADE
 );
