@@ -1,6 +1,6 @@
 ### Join operator
 
-- join is use to query between two or more related column in tables.
+- join is use to query between two or more related column in tables, the tables dosen't need to have ralation among them.
 
 1. Normal/inner join.
 * branch and employee are two different table with a relation.
