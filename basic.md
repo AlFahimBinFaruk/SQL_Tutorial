@@ -19,6 +19,7 @@ CREATE DATABASE testdb;
 
 2. DROP/delete DB,table
 
+
 ```sql
 -- drop db
 DROP DATABASE testdb;
@@ -29,9 +30,13 @@ DROP TABLE employee;
 
 3. Create new table in DB
 
-```
+```sql
 CREATE TABLE table_name (
-    column name + data type + constraints if any
+    (column name) (data type) (constraints if any)
+)
+
+CREATE TABLE db_name.table_name (
+    (column name) (data type) (constraints if any)
 )
 ```
 
