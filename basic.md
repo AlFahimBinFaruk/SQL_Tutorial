@@ -130,7 +130,7 @@ SET address = "IN";
 
 8. Find/Search Info
 
-```
+```sql
 -- Normal
 SELECT *
 FROM employee;
@@ -201,12 +201,11 @@ WHERE full_name NOT IN ('Jim', 'Michael', 'Johnny', 'David');
 SELECT * FROM person 
 WHERE gender <> 'Male' 
 and gender <> 'Female';
-
 ```
 
 9. DISTINCT keyword(unique values)
 
-```
+```sql
 -- Find out all the different genders
 SELECT DISCINCT sex
 FROM employee;
@@ -223,7 +222,7 @@ WHERE id = 3;
 ```
 
 11. Between keyword - select within a range.
-```
+```sql
 SELECT * FROM person 
 WHERE date_of_birth 
 BETWEEN '2021-08-12' AND '2022-05-26';
