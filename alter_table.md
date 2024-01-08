@@ -55,7 +55,7 @@ ADD PRIMARY KEY(id);
 ```
 
 - adding check constraint,here unique_gender is the _col-name but it can be anything dosen't matter.
-```
+```sql
 ALTER TABLE person 
 ADD CONSTRAINT unique_gender CHECK(gender = 'male' OR gender = 'female');
 ```
