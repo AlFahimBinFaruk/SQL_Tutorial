@@ -2,6 +2,7 @@
 
 ```sql
 -- Find names of all employees who have sold over 50,000
+-- IN = if there are multiples id.
 SELECT employee.first_name, employee.last_name
 FROM employee
 WHERE employee.emp_id IN (SELECT works_with.emp_id
@@ -11,11 +12,13 @@ WHERE employee.emp_id IN (SELECT works_with.emp_id
 
 -- Find all clients who are handles by the branch that Michael Scott manages
 -- Assume you know Michael's ID
+-- = if there is only 1 id.
 SELECT client.client_id, client.client_name
 FROM client
 WHERE client.branch_id = (SELECT branch.branch_id
                           FROM branch
-                          WHERE branch.mgr_id = 102);
+                          WHERE branch.mgr_id = 102
+                          LIMIT 1 );
 
 
 
