@@ -37,3 +37,11 @@ FROM employee
 RIGHT JOIN branch
 ON employee.emp_id = branch.mgr_id;
 ```
+
+4. FULL OUTER JOIN =  Returns all records from both tables
+```sql
+SELECT j_name,emp_id,p_name
+FROM mydb.junior_data
+CROSS JOIN mydb.emp_data
+ON junior_data.emp_id=emp_data.p_id;
+```
