@@ -1,6 +1,6 @@
 ### Nested Query
 
-```
+```sql
 -- Find names of all employees who have sold over 50,000
 SELECT employee.first_name, employee.last_name
 FROM employee
@@ -61,7 +61,7 @@ WHERE client.client_id IN (
 
 
 - select infos from same table 
-```
+```sql
 Employee table:
 +----+-------+--------+-----------+
 | id | name  | salary | managerId |
