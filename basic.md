@@ -15,6 +15,9 @@
 
 ```sql
 CREATE DATABASE testdb;
+
+--- Using that db
+USE testdb;
 ```
 
 2. DROP/delete DB,table
