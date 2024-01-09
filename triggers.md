@@ -3,7 +3,7 @@
 - You can create trigger for INSERT,DELETE,UPDATE operations.
 - create a tigger_test table to monitor changing
 
-```
+```sql
 CREATE TABLE trigger_test (
      message VARCHAR(100)
 );
@@ -12,7 +12,7 @@ CREATE TABLE trigger_test (
 
 1. Create trigger
 
-```
+```sql
 -- change delimeter from ; to $$
 DELIMITER $$
 
@@ -30,7 +30,7 @@ DELIMITER ;
 
 - After
 
-```
+```sql
 -- create trigger
 CREATE
     TRIGGER my_trigger AFTER INSERT
@@ -57,7 +57,7 @@ DELIMITER ;
 
 3. Conditons
 
-```
+```sql
 DELIMITER $$
 CREATE
     TRIGGER my_trigger BEFORE INSERT
@@ -76,6 +76,6 @@ DELIMITER ;
 
 4. Delete trigger
 
-```
+```sql
 DROP TRIGGER my_trigger;
 ```
