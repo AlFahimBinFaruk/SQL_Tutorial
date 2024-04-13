@@ -4,6 +4,7 @@
 ```sql
 -start server
 sudo service mysql start
+sudo service mysql stop
 sudo service mysql status
 ```
 
