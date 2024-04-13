@@ -1,5 +1,12 @@
 ## SQL Tutorial
 
+### Mysql Workbench
+```sql
+-start server
+sudo service mysql start
+sudo service mysql status
+```
+
 ### TODO
 * [ ] Normalazation. 
 
